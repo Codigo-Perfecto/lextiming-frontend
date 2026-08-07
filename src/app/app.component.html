@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <span>LexTiming</span>
+  <span class="spacer"></span>
+  <ng-container *ngIf="authService.isAuthenticated()">
+    <button mat-button routerLink="/clientes">Clientes</button>
+    <button mat-button routerLink="/casos">Casos</button>
+    <button mat-button routerLink="/registros-tiempo">Tiempo</button>
+    <button mat-button routerLink="/facturas">Facturas</button>
+    <button mat-button (click)="logout()">Salir</button>
+  </ng-container>
+  <ng-container *ngIf="!authService.isAuthenticated()">
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button routerLink="/register">Registro</button>
+  </ng-container>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

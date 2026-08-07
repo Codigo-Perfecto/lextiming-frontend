@@ -1,0 +1,44 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+mat-card-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+mat-card-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-card-actions {
+  text-align: center;
+  padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #2a5298;
+}
+
+a:hover {
+  text-decoration: underline;
+}
