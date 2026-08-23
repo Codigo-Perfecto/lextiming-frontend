@@ -46,6 +46,7 @@
               "outputHashing": "all",
               "baseHref": "/lextiming-frontend/"
             },
+              
             "development": {
               "optimization": false,
               "extractLicenses": false,
