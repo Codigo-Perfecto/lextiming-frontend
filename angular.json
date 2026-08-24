@@ -43,6 +43,7 @@
                   "maximumError": "2MB"
                 }
               ],
+              
               "outputHashing": "all",
               "baseHref": "/lextiming-frontend/"
             },
