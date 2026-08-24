@@ -31,9 +31,11 @@ export interface AuthResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = environment.production 
-    ? 'https://lextiming-backend.onrender.com/api'   // ← URL de producción
-    : environment.apiUrl;                            // ← URL de desarrollo
+    
+  //  Detección automática del entorno
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? environment.apiUrl 
+    : 'https://lextiming-backend.onrender.com/api';     // URL de desarrollo
 
   private tokenKey = 'auth_token';
 
