@@ -9,7 +9,10 @@ import { Factura } from '../models/factura.model';
 })
 
 export class FacturaService {
-  private apiUrl = environment.apiUrl;
+  //  Detección automática del entorno
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? environment.apiUrl 
+    : 'https://lextiming-backend.onrender.com/api';     // URL de desarrollo
 
   constructor(private http: HttpClient) {}
 
