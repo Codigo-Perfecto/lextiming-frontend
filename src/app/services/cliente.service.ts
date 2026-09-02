@@ -8,7 +8,10 @@ import { Cliente } from '../models/cliente.model';
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = environment.apiUrl;
+  //  Detección automática del entorno
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? environment.apiUrl 
+    : 'https://lextiming-backend.onrender.com/api';     // URL de desarrollo
 
   constructor(private http: HttpClient) {}
 
